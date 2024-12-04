@@ -9,11 +9,22 @@ Interactive support site AI practisioners
 3. Breakout
    
 ### Realtime chat
-## Stack Q&A
-## Discussions
-## Break off groups
+## Q&A BBS
+## Individual Discussions (private)
+## Break off groups (public)
 ## Showcasing
 ## Document archives
 ### Video, Source, slides
+
+## Resources
+* News
+* Bookshelf
+* Podcasts
+* Articles (Medium)
+* Articles (YouTube)
+* Conferences
+* Courses
+* Academic Papers
+  
 
 
