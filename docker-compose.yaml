@@ -1,0 +1,45 @@
+name: ai-overflow
+
+services:
+  ollama:
+    build:
+      context: docker
+      dockerfile: Dockerfile
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "5000:5000"
+    networks:
+      - aio-network
+    restart: always
+
+#  aio-server:
+#    image: aioverflow/aio-server
+#    ports:
+#      - "5000:5000"
+#    networks:
+#      - aio-network
+#    volumes:
+#      - ./app:/app
+#    restart: always
+
+  aio-db:
+    image: postgres:12
+    container_name: aio-db
+    volumes:
+        - aio-db-data:/var/lib/postgresql/data
+    environment:
+        POSTGRES_USER: aioverflow
+        POSTGRES_PASSWORD: aioverflow
+        POSTGRES_DB: aioverflow
+    networks:
+        - aio-network
+    restart: always
+
+networks:
+    aio-network:
+        driver: bridge
+
+volumes:
+    aio-db-data:
+        driver: local
